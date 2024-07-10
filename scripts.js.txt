@@ -1,0 +1,10 @@
+// scripts.js
+function calcolaPreventivo() {
+    var dimensioni = document.getElementById('dimensioni').value;
+    var materiale = document.getElementById('materiale').value;
+    var stile = document.getElementById('stile').value;
+
+    var preventivo = (parseInt(dimensioni) || 0) * (materiale === 'legno' ? 1.2 : materiale === 'alluminio' ? 1.5 : 1) * (stile === 'moderno' ? 1.1 : 1);
+
+    document.getElementById('preventivoResult').innerText = "Il tuo preventivo è: €" + preventivo.toFixed(2);
+}

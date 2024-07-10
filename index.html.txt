@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore di Preventivi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calcolatore di Preventivi</h1>
+        <form id="preventivoForm">
+            <label for="dimensioni">Dimensioni (in cm):</label>
+            <input type="text" id="dimensioni" name="dimensioni" required>
+            
+            <label for="materiale">Materiale:</label>
+            <select id="materiale" name="materiale">
+                <option value="legno">Legno</option>
+                <option value="alluminio">Alluminio</option>
+                <option value="pvc">PVC</option>
+            </select>
+            
+            <label for="stile">Stile:</label>
+            <select id="stile" name="stile">
+                <option value="moderno">Moderno</option>
+                <option value="classico">Classico</option>
+            </select>
+            
+            <button type="button" onclick="calcolaPreventivo()">Calcola Preventivo</button>
+        </form>
+        
+        <div id="preventivoResult"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
